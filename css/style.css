@@ -29,6 +29,7 @@ body {
   color: #131313;
   word-break: keep-all;
   letter-spacing: normal;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -79,7 +80,7 @@ body::-webkit-scrollbar-track {
   padding: 0 8.33%;
   padding-top: 60px;
   transition: padding-top 0.3s;
-  background-color: pink;
+  background-color: #fff;
 }
 .header .inner.active {
   padding-top: 40px;
@@ -386,11 +387,13 @@ body::-webkit-scrollbar-track {
 .visual .inner {
   display: flex;
   justify-content: flex-start;
-  padding-top: 100px;
+  padding-top: 220px;
   z-index: 9;
+  width: 83.3333%;
+  max-width: 1920px;
 }
 .sw-visual-control {
-  margin-right: 260px;
+  margin-right: 17%;
 }
 
 .sw-visual-control li {
@@ -425,6 +428,7 @@ body::-webkit-scrollbar-track {
 
 .visual-wrap {
   position: relative;
+  width: 70%;
 }
 .visual-wrap h2 {
   font-size: 80px;
@@ -433,6 +437,8 @@ body::-webkit-scrollbar-track {
   line-height: 100px;
   letter-spacing: -3px;
   margin-bottom: 60px;
+
+  white-space: nowrap;
 }
 .visual-wrap h3 {
   font-size: 80px;
@@ -454,6 +460,7 @@ body::-webkit-scrollbar-track {
   width: 80px;
   height: 80px;
   cursor: pointer;
+  font-size: 0;
 }
 .sw-visual-prev::before {
   content: "";
@@ -482,6 +489,7 @@ body::-webkit-scrollbar-track {
   width: 80px;
   height: 80px;
   cursor: pointer;
+  font-size: 0;
 }
 
 .sw-visual-next::before {
@@ -508,6 +516,8 @@ body::-webkit-scrollbar-track {
   left: 0;
   top: calc(100% + 66px);
 
+  width: 45%;
+
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
@@ -517,17 +527,26 @@ body::-webkit-scrollbar-track {
 .visual-wrap p b {
   font-weight: 700;
   display: block;
+
+  margin-bottom: 20px;
 }
 /* 비주얼 Swiper */
 .swVisual-wrap {
   position: relative;
   display: block;
+
+  width: 83.3333%;
+  margin: 0 auto;
+  overflow: hidden;
+
   margin-top: -40px;
+
+  height: 720px;
 }
 
 .swVisual {
   width: 100%;
-  height: 480px;
+  height: 100%;
 }
 .v-box {
   position: relative;
@@ -548,19 +567,491 @@ body::-webkit-scrollbar-track {
   background-size: cover;
 }
 
+@media screen and (max-width: 1440px) {
+  .sw-visual-control {
+    margin-right: 14%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .visual-wrap h2 {
+    font-size: 55px;
+    line-height: 65px;
+    margin-bottom: 10px;
+  }
+  .visual-wrap h3 {
+    font-size: 55px;
+    font-weight: 800;
+  }
+  .visual-wrap p {
+    position: relative;
+    width: 100%;
+    left: auto;
+    top: auto;
+    margin-top: 50px;
+  }
+
+  .swVisual-wrap {
+    /* margin-top: 30px; */
+  }
+  .sw-visual-nav {
+    position: relative;
+    float: right;
+    right: auto;
+    bottom: auto;
+  }
+  .swVisual-wrap {
+    height: 648px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .visual .inner {
+    padding-top: 190px;
+  }
+  .visual-wrap p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  .swVisual-wrap {
+    height: 576px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .visual .inner {
+    padding-top: 170px;
+  }
+
+  .sw-visual-control {
+    margin-right: 10%;
+  }
+  .visual-wrap h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .visual-wrap h3 {
+    font-size: 40px;
+  }
+
+  .visual-wrap p {
+    font-size: 0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .visual-wrap p b {
+    font-size: 15px;
+  }
+  .sw-visual-nav {
+    display: none;
+  }
+  .swVisual-wrap {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .visual .inner {
+    padding-top: 140px;
+  }
+
+  .visual-wrap h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .visual-wrap h3 {
+    font-size: 35px;
+  }
+}
 /* 소개 */
 .about {
   position: relative;
   display: block;
+  padding: 10.41vw 0;
+  margin-top: 130px;
 }
+.about .inner {
+  width: 83.3333%;
+  max-width: 83.3333%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+}
+.about-left {
+  width: 50%;
+}
+
+.about-left span {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.about-left h2 {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 60px;
+}
+.about-left p {
+  width: 64%;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.about-left a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 12px;
+  margin-top: 100px;
+
+  min-width: 180px;
+  max-width: 180px;
+  height: 60px;
+  padding: 0 80px 0 30px;
+  background-color: #131313;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 60px;
+  text-align: left;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  border: 1px solid #fff;
+}
+.about-left a::after {
+  content: "";
+  display: block;
+  width: 40px;
+  min-width: 40px;
+  height: 3px;
+  background-color: #fff;
+  margin-left: auto;
+}
+.about-left a:hover {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+}
+.about-left a:hover:after {
+  background-color: #000;
+}
+
+.about-right {
+  width: 45%;
+}
+.about-right img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1680px) {
+}
+
+@media screen and (max-width: 1600px) {
+  .about-left h2 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+  .about-left p {
+    width: 90%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .about .inner {
+    padding: 0;
+  }
+  .about-left h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .about-left p {
+    font-size: 17px;
+  }
+  .about-right {
+    text-align: right;
+  }
+  .about-right img {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-left h2 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .about-left p {
+    font-size: 16px;
+  }
+  .about-right img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-left h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .about-left p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .about-left a {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .about .inner {
+    flex-wrap: wrap;
+  }
+  .about-left {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .about-left p {
+    width: 100%;
+  }
+  .about-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-right img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .about-left a {
+    min-width: 160px;
+    font-size: 16px;
+    height: 60px;
+    padding: 0 20px 0 20px;
+  }
+  .about-left a::after {
+    width: 25px;
+  }
+
+  .about-right img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .about-left a {
+    min-width: 120px;
+    height: 50px;
+  }
+}
+
+/* 텍스트 효과 */
 .effect {
   position: relative;
   display: block;
+  margin: 50px 0;
+  overflow: hidden;
 }
+.effect-01 {
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 160px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: nowrap;
+  color: #131313;
+  opacity: 0.1;
+}
+.effect-02 {
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 160px;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: nowrap;
+  opacity: 0.3;
+  color: transparent;
+  -webkit-text-stroke: 1px #131313;
+}
+
+/* 브랜드 */
 .brand {
   position: relative;
   display: block;
+  padding-top: 100px;
 }
+
+.brand .inner {
+  width: 83.3333%;
+  max-width: 83.3333%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 100px auto;
+}
+
+.brand-cate {
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  word-wrap: normal;
+  word-break: keep-all;
+}
+.brand-left {
+  width: 50%;
+}
+.brand-left h2 {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 80px;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.brand-right {
+  width: 50%;
+}
+.brand-right p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  word-wrap: normal;
+  word-break: keep-all;
+}
+
+.swBrandWrap {
+  position: relative;
+  display: block;
+  max-width: 83.3333%;
+  height: 835px;
+  margin: 0 auto;
+}
+.swBrand {
+  height: 100%;
+}
+.swBrand-good {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.swBrand-good-1 {
+  background: url("../images/bg_gola.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-2 {
+  background: url("../images/bg_comoninoz.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-3 {
+  background: url("../images/bg_w.standard.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-4 {
+  background: url("../images/bg_deliccent.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-5 {
+  background: url("../images/bg_outdoor_products.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-6 {
+  background: url("../images/bg_ocean_pacific.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-7 {
+  background: url("../images/bg_ordinary_holiday.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-8 {
+  background: url("../images/bg_field_worker.jpg") no-repeat center;
+  background-size: cover;
+}
+.swBrand-good-wrap {
+}
+.swBrand-good-wrap span {
+}
+.swBrand-good-wrap h3 {
+}
+.swBrand-good-wrap a {
+}
+@media screen and (max-width: 1600px) {
+  .brand .inner {
+    padding: 0;
+  }
+  .brand-left h2 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .brand-left h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .brand-right p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .brand-left h2 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .brand-right p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .brand-left h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .brand-right p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .brand-left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .brand-left h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .brand-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .brand-left h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .brand-left h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+/* 위치 */
 .location {
   position: relative;
   display: block;
